@@ -3,7 +3,7 @@
 
 The purpose of this project is to practice to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis.
 
-### About the raw data:
+### About the raw data
 
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
@@ -20,3 +20,27 @@ For each record it is provided:
 - A 561-feature vector with time and frequency domain variables. 
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
+ 
+### The tidying process
+
+Project instruction:
+
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+Steps in my run_analysis.R:
+
+1. Set working directory
+2. Import the features vector and the activity labels vector
+3. Import the test and training data sets respectively, each in 3 seperate data frame containing the subject id, activity id and 561 measurements
+4. Row bind the test and training data sets vertically
+5. Convert the activity id vector from integer 1-6 to factor, then rename with activity labels e.g. WALKING
+6. Convert the subject id vector from integer 1-30 to factor
+7. Set column names for the data: 'subject', 'activity' and 561 features names
+8. Column bind the 3 data frame, first column 'subject', second column 'activity', followed by 561 feature measurements (steps 1,3,4 complete)
+9. Extract mean and std measurments for each row (step 2 complete)
+10. Creates a tidy data set with the average of each measurment for each activity and each subject (step 5 complete)
+
