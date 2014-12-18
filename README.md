@@ -13,7 +13,7 @@ The content of this depository includes:
   - what is the content of tidy.txt
 - The cleaned output data set tidy.txt
 
-Please use the following code to examine the output:
+Please use the following code to examine the output, save the raw file locally, then in R:
 ```
 read.table("tidy.txt", header = TRUE)
 ```
