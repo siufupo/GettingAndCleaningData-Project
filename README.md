@@ -11,7 +11,7 @@ The content of this depository includes:
   - What is the raw data
   - The step by step process executed from the raw data sets to the tidy data set
   - what is the content of tidy.txt
-- The cleaned output data set by run_analysis.R: tidy.txt
+- The cleaned output data set tidy.txt
 
 Please use the following code to examine the output:
 ```
